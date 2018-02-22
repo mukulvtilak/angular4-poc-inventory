@@ -26,6 +26,17 @@ export class NameListService {
                     .catch(this.handleError);
   }
 
+  getNewJson(): Observable<string[]> {
+    return this.http.get('assets/data-new.json')
+    //              .do(data => console.log('server data:', data))  // debug
+                    .catch(this.handleError);
+  }
+  getOldJson(): Observable<string[]> {
+    return this.http.get('assets/data-old.json')
+    //              .do(data => console.log('server data:', data))  // debug
+                    .catch(this.handleError);
+  }
+
   /**
     * Handle HTTP error
     */
