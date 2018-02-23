@@ -19,18 +19,21 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
-        </button>
+        </button> -->
+        <button type="button" class="btn" (click)="printDoc()">Print</button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body bg-white txt-blk" id="print-content">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-6">
-              <pre>{{oldData}}</pre>
+              <h4>Old Data</h4>
+              <pre>{{ oldData }}</pre>
             </div>
             <div class="col-md-6">
-              <pre>{{oldData}}</pre>
+                <h4>New Data</h4>
+              <pre>{{ newData }}</pre>
             </div>
           </div>
         </div>
